@@ -1,18 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '../styles/Header.css';
 
-const Header = () => {
-    return (
-        <nav>
-            <h1>Super Learning</h1>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/courses">Courses</Link></li>
-                <li><Link to="/login">Login</Link></li>
-            </ul>
-        </nav>
-    );
-};
+function Header() {
+  return (
+    <header className="header">
+      <div className="header-content">
+        <h1>Learn Something New</h1>
+        <p>Everyday, Anywhere, Anytime</p>
+        <form className="header-form">
+          <input type="email" placeholder="Enter Email" />
+          <input type="password" placeholder="Enter Password" />
+          <button type="submit">Start 7 Days Free</button>
+        </form>
+      </div>
+    </header>
+  );
+}
 
 export default Header;
